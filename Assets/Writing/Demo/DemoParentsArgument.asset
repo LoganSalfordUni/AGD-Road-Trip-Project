@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105e448996c697343b51ea3ed91413ff, type: 3}
+  m_Name: DemoParentsArgument
+  m_EditorClassIdentifier: 
+  textFileOrigin: {fileID: 0}
+  sections:
+  - sectionName: $start
+    sectionLines:
+    - 'm: | ...'
+    - 'f: ...'
+    - 'f: Whats with the attitude'
+    - 'm:  i dont have an attitude'
+    - 'f: you''ve been sulking | the whole way here'
+    - 'm: SULKING? If I''m sulking what do you do at home day in day out'
+    - 'f: what?'
+    - 'm: you never do anything to help around the house. you | just laze around
+      like a slob'
+    - 'f: I have a busy job. Sorry if I want to RELAX every now | and then'
+    - 'm: I''d LOVE to relax sometime. maybe I could | find out what its like if
+      you did the dishes once every blue moon'
+    - 'f: where is all this coming from. you''ve always been happy to be useful around
+      the house. you love cleaning'
+    - 'm: do you not think i have a busy | job too. I work just as many hours as
+      you'
+    - 'f: This isnt the time or the place to discuss this right now. we got the kid
+      in the back. think'

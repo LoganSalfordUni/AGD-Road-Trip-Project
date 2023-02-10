@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105e448996c697343b51ea3ed91413ff, type: 3}
+  m_Name: Test2
+  m_EditorClassIdentifier: 
+  textFileOrigin: {fileID: 0}
+  sections:
+  - sectionName: $start
+    sectionLines:
+    - gender is a 3d platformer and i am glitching through the floor
+    - '?gender: boop beep / ?alien: i am from outer space'
+    - arghhh you shouldnt have made it this far!
+  - sectionName: $gender
+    sectionLines:
+    - Boop beep. Robot code recognised. Revealing to you the secrets of robot society...
+    - ...please stand by whilst robot society is downloaded into your brain
+    - bzzt. brrr. beep beep
+  - sectionName: $alien
+    sectionLines:
+    - OUTER SPACE?!
+    - WOW. IM IN LOVE WITH YOU ALREADY

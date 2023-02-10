@@ -13,7 +13,7 @@ namespace DialogueSystem
         public struct section
         {
             public string sectionName;
-            public string[] sectionLines;
+            [TextArea(1,2)] public string[] sectionLines;
         }
         [SerializeField]
         private section[] sections;

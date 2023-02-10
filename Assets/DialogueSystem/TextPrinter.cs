@@ -25,6 +25,9 @@ namespace DialogueSystem
         [SerializeField] GameObject motherTextBox;
         [SerializeField] TMP_Text motherTextField;
         float motherTextBoxTimer;
+        [Space(5)]
+        [SerializeField] GameObject mainTextBox;
+        [SerializeField] TMP_Text mainTextField;
 
         //I wanna add these in at some point, BUT I think I want them to work by having you click through the dialogue. in which case, it might be better to just. do a new dialogue system for them
         //to save work. maybe when this is done printing. add in a bool that waits for the player to click. and then goes to the next dialogue bit (this may run into issues with a pause menu or something too)
@@ -34,9 +37,10 @@ namespace DialogueSystem
         bool callNextLineWhenTimerReachesZero;//if this is true. call the next line once the timer reaches zero
         private float timeTillNextLine;//when this reaches 0. Call the line reader to go to the next line
 
-        public void DisplayText(string textToDisplay, string whichTextBox)
+        public void DisplayArgumentText(string textToDisplay, string whichTextBox)
         {
-            float newTimer = (textToDisplay.Split(' ').Length * 0.32f) + (textToDisplay.Split(',').Length * 0.1f) + 0.2f;//figure out how long the timers should last for. you can read about 3.5 words per second. adding in 0.5 seconds for good measure. and a lil extra time for common punctuation marks (. and ,). NOTE: removed the extra time from . becus what if we inconsistently add fullstops to the ends of sentences. the time will be weird
+            //about the timer below. Im testing different times. 3.2 is a good fast speed but can be difficult to keep up with 
+            float newTimer = (textToDisplay.Split(' ').Length * 0.4f) + (textToDisplay.Split(',').Length * 0.1f) + 0.2f;//figure out how long the timers should last for. you can read about 3.5 words per second. adding in 0.5 seconds for good measure. and a lil extra time for common punctuation marks (. and ,). NOTE: removed the extra time from . becus what if we inconsistently add fullstops to the ends of sentences. the time will be weird
             callNextLineWhenTimerReachesZero = true;
             timeTillNextLine = newTimer;
 
@@ -52,6 +56,22 @@ namespace DialogueSystem
             }
         }
 
+        bool canClickToNextLine;
+
+        public void DisplayMainText(string dialogue)
+        {
+            StartCoroutine(PrintToMainTextField(dialogue));
+        }
+
+        private void Update()
+        {
+            if (canClickToNextLine && Input.GetMouseButtonDown(0))
+            {
+                canClickToNextLine = false;
+                LineReader.instance.MainHandleNextLine();
+            }
+        }
+
         private void LateUpdate()
         {
             //i want lines to progress automatically. 
@@ -60,7 +80,7 @@ namespace DialogueSystem
             {
                 Debug.Log("going to next line");
                 callNextLineWhenTimerReachesZero = false;
-                LineReader.instance.HandleNextLine();
+                LineReader.instance.ArgumentHandleNextLine();
             }
 
             if (motherTextBoxTimer <= 0f)
@@ -91,12 +111,12 @@ namespace DialogueSystem
             {
                 if (part.Contains('|'))
                 {
-                    LineReader.instance.HandleNextLine();
+                    LineReader.instance.ArgumentHandleNextLine();
                     continue;
                 }
 
                 motherTextField.text += part + " ";
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(0.25f);
             }
         }
         IEnumerator PrintToFatherTextField(string textToDisplay)
@@ -110,12 +130,27 @@ namespace DialogueSystem
             {
                 if (part.Contains('|'))
                 {
-                    LineReader.instance.HandleNextLine();
+                    LineReader.instance.ArgumentHandleNextLine();
                 }
 
                 fatherTextField.text += part + " ";
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(0.15f);//making the father speak a bit faster
             }
+        }
+
+        IEnumerator PrintToMainTextField(string textToDisplay)
+        {
+            mainTextBox.SetActive(true);
+            mainTextField.text = "";
+
+            foreach (char c in textToDisplay)
+            {
+                mainTextField.text += c;
+                yield return new WaitForSeconds(0.03f);
+            }
+
+            //once the dialogue is printed. the player can click to skip to the next line
+            canClickToNextLine = true;
         }
     }
 }
