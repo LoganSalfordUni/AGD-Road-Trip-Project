@@ -19,8 +19,6 @@ MonoBehaviour:
     - Do you think my parents still love one another?
     - '?yesLove: Thats why they fight / NoLove: They''re only together because they''re
       scared of being alone'
-    - '?yesLove: Thats why they fight / NoLove: They''re only together because they''re
-      scared of being alone'
   - sectionName: $yeslove
     sectionLines:
     - ...

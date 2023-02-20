@@ -18,9 +18,12 @@ namespace CombatSystem
 
         [SerializeField] TMP_Text manaField;
 
-        [SerializeField] private PlayerStats playerStats;
+        [SerializeField] public PlayerStats playerStats;
+
+        [SerializeField] private GameObject explosiveBarrelPrefab;
 
         private List<Card> deck;
+        [SerializeField] 
         private List<Card> discardPile;
         private float health;
         public float Health { get { return health; } }
@@ -50,8 +53,7 @@ namespace CombatSystem
             health = playerStats.maxHealth;
             cardsInHand = 0;
 
-            while (cardsInHand < handLimit)
-                DrawCard();
+
 
 
             //testing
@@ -84,6 +86,8 @@ namespace CombatSystem
         void ShuffleDiscardPileIntoDeck()
         {
             Debug.Log("Need to make this bit lol");
+            deck.AddRange(discardPile);
+            discardPile.RemoveRange(0, discardPile.Count);
         }
 
 
@@ -92,12 +96,18 @@ namespace CombatSystem
         {
             currentMana = Random.Range(1, 5) + Random.Range(1, 5);
 
+            while (cardsInHand < handLimit)
+                DrawCard();
+
             isMyTurn = true;
         }
 
         private CardButtons currentlySelectedCard;
         public void SelectCard(CardButtons card)
         {
+            if (currentlySelectedCard != null)
+                currentlySelectedCard.UnhighlightMe();
+
             if (card.myCard.manaCost > currentMana)
             {
                 card.UnhighlightMe();
@@ -107,15 +117,29 @@ namespace CombatSystem
             currentlySelectedCard = card;
         }
         
-        void ActivateCard(Enemy target = null)
+        void ActivateCard(Enemy target = null, float[] position = null)
         {
             Debug.Log(currentlySelectedCard.myCard.abilityName);
 
             currentMana -= currentlySelectedCard.myCard.manaCost;
 
+            float damageMod = Mathf.Clamp(playerStats.attackPower, 1f, 9999f);
+            float knockbackMod = 3 + (playerStats.knockbackPower / 10f);
+
             if (target != null)
             {
-                target.AttackMe();
+                float knockbackValue = 0f;
+                foreach (Card.AbilityEffects abilityEffect in currentlySelectedCard.myCard.abilityEffects)
+                {
+                    if (abilityEffect == Card.AbilityEffects.knockback)
+                        knockbackValue = knockbackMod;
+                }
+                target.AttackMe(currentlySelectedCard.myCard.damageValue * damageMod, knockbackValue);
+            }
+            if (position != null)
+            {
+                ExplosiveBarrel barrel = Instantiate(explosiveBarrelPrefab, new Vector3(position[0], position[1], position[2]), Quaternion.identity).GetComponent<ExplosiveBarrel>();
+                barrel.SetMyValues(currentlySelectedCard.myCard.damageValue, 3f);//for now the default radius is 3. to do: Add a radius thing to the card script
             }
 
             discardPile.Add(currentlySelectedCard.myCard);
@@ -176,13 +200,20 @@ namespace CombatSystem
                         targettedEnemy = hit.collider.GetComponent<Enemy>();
                     }
                 }
-
+                //targetting:
                 switch (currentlySelectedCard.myCard.targettingStyle)
                 {
                     case Card.TargettingStyle.singleTarget:
                         if (Input.GetMouseButtonDown(0) && targettedEnemy != null)
                         {
                             ActivateCard(targettedEnemy);
+                        }
+                        break;
+                    case Card.TargettingStyle.clickToSpawnExplosive:
+                        if (Input.GetMouseButtonDown(0) && mousePosition.z > 2f)//this 2f thing makes sure you cant click to close to your character or below. but its not the best since you could still click out of bounds. 
+                        {
+                            float[] pos = { mousePosition.x, mousePosition.y, mousePosition.z };
+                            ActivateCard(null, pos);
                         }
                         break;
                 }

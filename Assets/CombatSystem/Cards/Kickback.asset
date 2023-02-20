@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Kickback
   m_EditorClassIdentifier: 
   _abilityName: kickback
-  _manaCost: 1
+  _manaCost: 3
   _abilityDistance: 20
-  _damageValue: 11
-  _knockbackValue: 5
-  _canBeRerolled: 1
+  _damageValue: 5
+  _targettingStyle: 0
+  _abilityEffects: 00000000

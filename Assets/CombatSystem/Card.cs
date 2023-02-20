@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//notes about the cards. cards with knockback should be high mana cost 
+//set up cards should also have a high mana cost 
+//most generic damage cards should be a low mana cost 
+
 namespace CombatSystem
 {
     [CreateAssetMenu]
@@ -21,20 +25,24 @@ namespace CombatSystem
         [SerializeField] private int _damageValue;
         public int damageValue { get { return _damageValue; } }
 
-        [SerializeField] private float _knockbackValue;
-        public float knockbackValue { get { return _knockbackValue; } }
-
 
         public enum TargettingStyle
         {
             singleTarget,
-            Cone
+            Cone,
+            clickToSpawnExplosive
         }
         [SerializeField] private TargettingStyle _targettingStyle;
         public TargettingStyle targettingStyle { get { return _targettingStyle; } }
 
-        [SerializeField] private bool _canBeRerolled = true;
-        public bool canBeRerolled { get { return _canBeRerolled; } }
+
+        public enum AbilityEffects
+        {
+            knockback,
+            cantBeRerolled
+        }
+        [SerializeField] private AbilityEffects[] _abilityEffects;
+        public AbilityEffects[] abilityEffects { get { return _abilityEffects; } }
     }
 }
 

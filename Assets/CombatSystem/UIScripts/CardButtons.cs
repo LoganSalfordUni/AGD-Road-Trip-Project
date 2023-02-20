@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace CombatSystem
 {
@@ -12,6 +13,7 @@ namespace CombatSystem
         public Card myCard { get { return card; } }
 
         Image myImage;
+        [SerializeField] TMP_Text myText;
 
         private void Start()
         {
@@ -21,6 +23,8 @@ namespace CombatSystem
         public void SetMyCard(Card newCard)
         {
             card = newCard;
+
+            myText.text = card.abilityName;
         }
 
         /*private void OnMouseUp()

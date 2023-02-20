@@ -16,10 +16,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 48e23704739b8ba43a565d5a8665aacb, type: 2}
   - {fileID: 11400000, guid: 48e23704739b8ba43a565d5a8665aacb, type: 2}
   - {fileID: 11400000, guid: 48e23704739b8ba43a565d5a8665aacb, type: 2}
-  - {fileID: 11400000, guid: 48e23704739b8ba43a565d5a8665aacb, type: 2}
-  - {fileID: 11400000, guid: 48e23704739b8ba43a565d5a8665aacb, type: 2}
-  - {fileID: 11400000, guid: 48e23704739b8ba43a565d5a8665aacb, type: 2}
-  - {fileID: 11400000, guid: 48e23704739b8ba43a565d5a8665aacb, type: 2}
-  - {fileID: 11400000, guid: 48e23704739b8ba43a565d5a8665aacb, type: 2}
-  - {fileID: 11400000, guid: 48e23704739b8ba43a565d5a8665aacb, type: 2}
+  - {fileID: 11400000, guid: 90475bf54aaed484db102bccb5db14ae, type: 2}
+  - {fileID: 11400000, guid: 90475bf54aaed484db102bccb5db14ae, type: 2}
+  - {fileID: 11400000, guid: 90475bf54aaed484db102bccb5db14ae, type: 2}
+  - {fileID: 11400000, guid: 90475bf54aaed484db102bccb5db14ae, type: 2}
+  - {fileID: 11400000, guid: c635171f697c1344183fc9850c2f544d, type: 2}
+  - {fileID: 11400000, guid: c635171f697c1344183fc9850c2f544d, type: 2}
   _maxHealth: 0
+  _speed: 3
+  _attackPower: 0
