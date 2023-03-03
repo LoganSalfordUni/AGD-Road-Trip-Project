@@ -145,6 +145,12 @@ namespace DialogueSystem
 
             foreach (char c in textToDisplay)
             {
+                if (c == '#')
+                {
+                    yield return new WaitForSeconds(0.1f);
+                    continue;
+                }
+
                 mainTextField.text += c;
                 yield return new WaitForSeconds(0.03f);
             }
