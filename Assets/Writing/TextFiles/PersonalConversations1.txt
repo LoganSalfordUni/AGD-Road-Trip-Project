@@ -1,0 +1,55 @@
+/Love
+$startLove
+Do you think my parents still love one another?
+?yesLove: Thats why they fight / NoLove: They're only together because they're scared of being alone
+
+$yeslove
+...
+They fight because they care? I don’t think I’ve fought about anything before. Are there other ways to care or am I incapable of it... 
+...I think if they really cared, the fights would lead somewhere that wasn’t more fighting.  
+
+$nolove
+I’ve never thought about adults being scared before. When you see a movie, they’re always brave and heroic. 
+?moviesNotReal: Movies aren't real life / scaredAdults: There's probably movies about adults who are scared
+
+$moviesnotreal
+I know that, but real life should be more like movies I think. Movies have romance, and spectacle. In a movie you can talk to a stranger and go on an adventure together and make life long friends 
+
+$scaredadults
+What kind of things are adults scared of? Being alone. Death. I don’t think adults fear the Bermuda triangle, or alien invasions.
+I wouldn’t want to make any movies about scared people unless it was about overcoming their fear.
+Like they fly over the Bermuda triangle and get sent to this strange world, but they overcome it on this big adventure. 
+
+
+/Memories
+$MemoriesStart
+Tell me### about your favourite memory...
+?venusFestival:At the start of a century on venus, we set fires to the sky to bless everyone with luck / operaWife:The day I met my wife, we were sat next to one another at the opera
+
+$venusFestival
+/oaef add in a inventory about venusfestivals. same for the opera option. and then dialogue. then go to $luck
+
+$operaWife
+/oaef. then goto $luck
+
+$Luck
+Do you believe in luck?
+?luckYes: Yes / luckNo: No
+
+$LuckYes
+
+$LuckNo
+
+$MemoryChoice
+?FaveMemory: What about your favourite memory? / WorstMemory: What is your worst memory?
+
+$FaveMemory
+When I was younger, we were on holiday. My mum and I were late for this pottery class, and we asked one of the locals the route home. 
+They gave us this shortcut that sent us through this tiny graveyard. I stopped to look at one of the graves, and it was unmarked.
+All of them were. All the people buried there don’t have an identity because no one could recognize them.
+It was sad but it felt sort of peaceful. I wanted to spend more time there.
+
+$WorstMemory
+I’m not sure. Its hard to remember anything Id call my least favourite memory. 
+I hate bad memories the closer they are. Like right now, this car journey is my least favourite memory. 
+In 5 years hopefully ill have had worse experiences so this isnt my worst memory. 
