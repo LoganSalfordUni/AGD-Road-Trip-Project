@@ -206,7 +206,14 @@ namespace DialogueSystem
             ArgumentHandleNextLine();
         }
 
-        
+        public void LoadArgumentFile(ParsedText newText)
+        {
+            currentArgumentFile = newText;
+        }
+        public void LoadThoughtFile(ParsedText newText)
+        {
+            currentMainDialogueFile = newText;
+        }
     }
 }
 
