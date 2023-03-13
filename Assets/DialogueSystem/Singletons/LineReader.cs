@@ -159,6 +159,9 @@ namespace DialogueSystem
 
         public void MainJumpToSection(string desiredSection)
         {
+            if (currentMainDialogueFile == null)
+                return;
+
             desiredSection = desiredSection.Trim().ToLower();
             if (!desiredSection.StartsWith('$'))
                 desiredSection = "$" + desiredSection;
