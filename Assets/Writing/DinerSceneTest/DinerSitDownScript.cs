@@ -22,7 +22,7 @@ public class DinerSitDownScript : MonoBehaviour
 
 
     [SerializeField, Tooltip("When these text boxes are inactive. The player has an easier time standing up")] GameObject[] adultConversationTextBoxes;
-    TMP_Text[] conversationTextFields;
+    List<TMP_Text> conversationTextFields;
 
     [Header("After standing up")]
     [SerializeField] GameObject[] disableThese;
@@ -32,14 +32,14 @@ public class DinerSitDownScript : MonoBehaviour
     {
         //Load some dialogue, then the coroutine. 
         canPressPToStand = false;
-        LineReader.instance.ArgumentJumpToSection("start");
+        LineReader.instance.ArgumentJumpToSection("loop");
 
 
-
-        conversationTextFields[0] = adultConversationTextBoxes[0].GetComponent<TMP_Text>();
-        conversationTextFields[1] = adultConversationTextBoxes[1].GetComponent<TMP_Text>();
+        conversationTextFields = new List<TMP_Text>();
+        conversationTextFields.Add(adultConversationTextBoxes[0].GetComponent<TMP_Text>());
+        conversationTextFields.Add(adultConversationTextBoxes[1].GetComponent<TMP_Text>());
+        StartCoroutine(WaitTillYouCanGoToTheBathroom());
     }
-
 
 
 

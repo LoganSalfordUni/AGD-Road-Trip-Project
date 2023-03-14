@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textFileOrigin: {fileID: 0}
   sections:
-  - sectionName: $start
+  - sectionName: $loop
     sectionLines:
     - f:AND thats when he said. "Thats not marmalade"
     - 'm: HAHAHAHAHA'
@@ -24,3 +24,4 @@ MonoBehaviour:
     - 'm: oh right'
     - 'f: Whats new with you'
     - 'm: I have a new limb'
+    - '!autogoto.loop'

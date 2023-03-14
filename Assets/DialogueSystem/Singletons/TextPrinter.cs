@@ -78,7 +78,7 @@ namespace DialogueSystem
             timeTillNextLine -= Time.deltaTime;
             if (callNextLineWhenTimerReachesZero && timeTillNextLine <= 0f)
             {
-                Debug.Log("going to next line");
+                //Debug.Log("going to next line");
                 callNextLineWhenTimerReachesZero = false;
                 LineReader.instance.ArgumentHandleNextLine();
             }

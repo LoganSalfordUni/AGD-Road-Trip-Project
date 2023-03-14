@@ -55,7 +55,7 @@ public class DinerCharacterControllerLJ : MonoBehaviour
 
     void ControlCameraAngle()
     {
-        Vector3 targetPos = new Vector3(playerBody.transform.position.x, myCamera.transform.position.y + 2f, playerBody.transform.position.z);
+        Vector3 targetPos = new Vector3(playerBody.transform.position.x, myCamera.transform.position.y, playerBody.transform.position.z);
         myCamera.LookAt(targetPos);
 
         if (myCamera.eulerAngles.y < cameraRestraints.x)

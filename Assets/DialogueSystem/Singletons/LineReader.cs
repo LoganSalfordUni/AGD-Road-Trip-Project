@@ -87,8 +87,8 @@ namespace DialogueSystem
             if (currentLine.StartsWith('!'))
             {
                 //its a command
-
-                ArgumentHandleNextLine();//for now just skip to the next line. DELETE THIS LATER
+                
+                CommandManager.instance.HandleCommand(currentLine);
             }
             else
             {
