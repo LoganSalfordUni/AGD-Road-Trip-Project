@@ -28,10 +28,13 @@ public class DinerSitDownScript : MonoBehaviour
     [SerializeField] GameObject[] disableThese;
     [SerializeField] GameObject[] enableThese;
 
+    float timesTriedToStand;
+
     private void Start()
     {
         //Load some dialogue, then the coroutine. 
         canPressPToStand = false;
+        timesTriedToStand = 0f;
         LineReader.instance.ArgumentJumpToSection("loop");
 
 
@@ -46,7 +49,7 @@ public class DinerSitDownScript : MonoBehaviour
     float pTimer;
     IEnumerator WaitTillYouCanGoToTheBathroom()
     {
-        yield return new WaitForSeconds(2f);//after testing, move this time up
+        yield return new WaitForSeconds(7f);//after testing, move this time up
 
         canPressPToStand = true;
         pTimer = 0f;
@@ -70,22 +73,23 @@ public class DinerSitDownScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             //check if the player can stand up based on if the conversation with the adults is at a standstill or not
-            pTimer = 0.2f;
-            float chanceOfStandUp = 0.5f;
+            pTimer = 0.35f;
+            float chanceOfStandUp = (timesTriedToStand * 0.23f);//More likely to succeed after a few attempts. Originally had this at 0.7 but i felt like itd be better if all players had to fail a few times rather than just getting lucky
+            timesTriedToStand += 1f;
             if (adultConversationTextBoxes[0].activeInHierarchy)
             {
-                chanceOfStandUp -= 0.3f;
+                chanceOfStandUp -= 0.5f;
                 if (conversationTextFields[0].text == "...")
                 {
-                    chanceOfStandUp += 0.3f;
+                    chanceOfStandUp += 0.5f;
                 }
             }
             if (adultConversationTextBoxes[1].activeInHierarchy)
             {
-                chanceOfStandUp -= 0.3f;
+                chanceOfStandUp -= 0.5f;
                 if (conversationTextFields[1].text == "...")
                 {
-                    chanceOfStandUp += 0.3f;
+                    chanceOfStandUp += 0.5f;
                 }
             }
 
@@ -117,7 +121,7 @@ public class DinerSitDownScript : MonoBehaviour
     {
         succesfulStandUpText.SetActive(true);
         pressPToStandUpText.SetActive(false);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
         StandUp();
         succesfulStandUpText.SetActive(false);
     }

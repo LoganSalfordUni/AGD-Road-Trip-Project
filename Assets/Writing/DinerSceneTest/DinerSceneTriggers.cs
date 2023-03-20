@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DinerSceneTriggers : MonoBehaviour
 {
@@ -62,7 +63,7 @@ public class DinerSceneTriggers : MonoBehaviour
 
             if (triggerCode == TriggerCode.enterBathroom)
             {
-
+                EnterBathroom();
             }
 
 
@@ -79,5 +80,6 @@ public class DinerSceneTriggers : MonoBehaviour
     void EnterBathroom()
     {
         //change the scene
+        SceneManager.LoadScene("MontyHallBathroom");
     }
 }

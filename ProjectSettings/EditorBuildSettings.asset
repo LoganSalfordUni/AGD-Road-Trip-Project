@@ -4,6 +4,9 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MontyHallBathroom.unity
+    guid: d7326c0624cefa2459d1e67d61e764cb
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 5fe80fac7444a1142bb67505037ee28e, type: 2}
