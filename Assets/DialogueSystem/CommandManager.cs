@@ -36,6 +36,9 @@ namespace DialogueSystem
             if (lineParts[0] == "gotomanual" || lineParts[0] == "manualgoto")
                 GoToSectionManual(lineParts[1]);
 
+            if (lineParts[0] == "nextbathroomevent")
+                BathroomEvent();
+
         }
 
 
@@ -60,6 +63,11 @@ namespace DialogueSystem
         {
             Debug.Log("sending the manual dialogue system to: " + sectionName);
             LineReader.instance.MainJumpToSection(sectionName);
+        }
+
+        void BathroomEvent()
+        {
+            BathroomDirector.instance.NextEvent();
         }
     }
 }

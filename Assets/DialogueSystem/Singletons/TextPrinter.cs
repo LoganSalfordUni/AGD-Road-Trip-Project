@@ -85,14 +85,16 @@ namespace DialogueSystem
 
             if (motherTextBoxTimer <= 0f)
             {
-                motherTextBox.SetActive(false);
+                if (motherTextBox != null)
+                    motherTextBox.SetActive(false);
             }
             else
                 motherTextBoxTimer -= Time.deltaTime;
 
             if (fatherTextBoxTimer <= 0f)
             {
-                fatherTextBox.SetActive(false);
+                if (fatherTextBox != null)
+                    fatherTextBox.SetActive(false);
             }
             else
                 fatherTextBoxTimer -= Time.deltaTime;

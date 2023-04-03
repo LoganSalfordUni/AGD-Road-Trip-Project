@@ -19,20 +19,20 @@ namespace DialogueSystem
         {
             _progressMarkers = new HashSet<string>();
 
-            if (TESTLoadTextFileOnPlay)
+            /*if (TESTLoadTextFileOnPlay)
                 currentArgumentFile.LoadTextFile();
             if (TESTLoadTextFile2OnPlay)
-                currentMainDialogueFile.LoadTextFile();
+                currentMainDialogueFile.LoadTextFile();*/
 
             //this is for TESTING only
-            ArgumentJumpToSection("start");
-            MainJumpToSection("start");
+            //ArgumentJumpToSection("start");
+            //MainJumpToSection("start");
         }
 
         [SerializeField, Tooltip("The file for your parents argument.")]
         ParsedText currentArgumentFile;
-        [SerializeField, Tooltip("Load the text file on play. should be used for testing purposes only, not in the build version. will destroy edits made outside the text file")]
-        bool TESTLoadTextFileOnPlay;
+        //[SerializeField, Tooltip("Load the text file on play. should be used for testing purposes only, not in the build version. will destroy edits made outside the text file")]
+        //bool TESTLoadTextFileOnPlay;
 
         [SerializeField, Tooltip("This file contains any dialogue between yourself, and any interactions")]
         ParsedText currentMainDialogueFile;
