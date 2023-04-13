@@ -310,9 +310,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 465534724}
+  - component: {fileID: 465534721}
   - component: {fileID: 465534723}
   - component: {fileID: 465534722}
-  - component: {fileID: 465534721}
   - component: {fileID: 465534720}
   m_Layer: 0
   m_Name: Managers
@@ -351,6 +351,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393cbbf2db5d232469dad6338e8411d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doors:
+  - {fileID: 1049646071}
+  - {fileID: 1987098448}
+  - {fileID: 222852298}
 --- !u!114 &465534722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -828,6 +832,7 @@ GameObject:
   - component: {fileID: 1655846722}
   - component: {fileID: 1655846721}
   - component: {fileID: 1655846720}
+  - component: {fileID: 1655846723}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -901,6 +906,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1655846723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655846719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c49b4cc203aa6414fae5c798d1d0e7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1 &1889374368
 GameObject:
   m_ObjectHideFlags: 0

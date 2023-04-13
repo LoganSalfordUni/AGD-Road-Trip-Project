@@ -21,13 +21,11 @@ namespace DialogueSystem
             if (commandLine.StartsWith('!'))
                 commandLine = commandLine.Remove(0,1);
             commandLine = commandLine.ToLower().Trim();
-            Debug.Log(commandLine);
+            //Debug.Log(commandLine);
 
             string[] lineParts = commandLine.Split('.');
             for (int i = 0; i < lineParts.Length; i++)
                 lineParts[i] = lineParts[i].Trim();
-
-            Debug.Log(lineParts[0] + ", " + lineParts[1]);
 
             if (lineParts[0] == "nextstorybeat")
                 nextStoryBeat();

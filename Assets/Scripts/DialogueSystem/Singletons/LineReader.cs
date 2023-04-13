@@ -118,6 +118,7 @@ namespace DialogueSystem
             if (currentLine.StartsWith('!'))
             {
                 //its a command
+                CommandManager.instance.HandleCommand(currentLine);
             }
             else if (currentLine.StartsWith('?'))
             {

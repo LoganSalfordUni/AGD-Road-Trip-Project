@@ -26,6 +26,7 @@ public class BathroomDirector : MonoBehaviour
     int revealedDoor;
     int goalDoor;//the door that you want to choose
 
+    [SerializeField]
     GameObject[] doors;//for now im just deleting these doors. mby animate them later but theres no point in doing so whilst i dont have the art assets
 
     enum CurrentStoryState
@@ -56,12 +57,9 @@ public class BathroomDirector : MonoBehaviour
         }
         else if (currentStory == CurrentStoryState.waitingForSwap)
         {
-            if (doorNumber != revealedDoor)
-            {
-                selectedDoor = doorNumber;
-                currentStory = CurrentStoryState.finalReveal;
-                FinalReveal();
-            }
+            selectedDoor = doorNumber;
+            currentStory = CurrentStoryState.finalReveal;
+            FinalReveal();
         }
     }
 
@@ -75,6 +73,12 @@ public class BathroomDirector : MonoBehaviour
         if (currentStory == CurrentStoryState.chosenFirstDoor)
         {
             currentStory = CurrentStoryState.revealSecondDoor;
+            RevealSecondDoor();
+        }
+
+        if (currentStory == CurrentStoryState.revealSecondDoor)
+        {
+            currentStory = CurrentStoryState.waitingForSwap;
         }
     }
 
@@ -97,7 +101,9 @@ public class BathroomDirector : MonoBehaviour
         //revealedDoor = possibleDoors[0];//there are either 2 or 1 items left in this list. Either way, grabbing the earliest one is fine. The flaw with this is that, if a player knew it was coded this way, and the player chose door one, and door 3 gets revealed. then they know for certain that door 2 is correct. but that shouldnt really be a concern
         revealedDoor = Random.Range(0, possibleDoors.Count);
 
-        Destroy(doors[revealedDoor - 1]);
+        Destroy(doors[revealedDoor]);
+
+        LineReader.instance.MainJumpToSection("revealedsecond");
 
     }
 
