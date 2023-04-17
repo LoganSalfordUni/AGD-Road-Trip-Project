@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105e448996c697343b51ea3ed91413ff, type: 3}
+  m_Name: CarSceneTwoArguments
+  m_EditorClassIdentifier: 
+  textFileOrigin: {fileID: 4900000, guid: 09237fc767cd03649b8bf12545c25554, type: 3}
+  sections:
+  - sectionName: $diet
+    sectionLines:
+    - "m:By the way, you need to do more\r"
+    - "m:than serve pieces of bread\r"
+    - "m:with cheese on them for tea\r"
+    - "m:when I'm not home\r"
+    - "f:Its just one day a week, they'll live\r"
+    - "m:Its not just sandwiches though, you\r"
+    - "m:always let them eat and drink the \r"
+    - "m:most sugary foods and I always have to\r"
+    - "m:be the bad one\r"
+    - "f:The government exaggerates how bad sugar is.\r"
+    - "f:I dont worry about it, and I'm healthy\r"
+    - "m:Why is it so hard for you to\r"
+    - "m:take care of our child?\r"
+    - "f:You're complaining at me, when\r"
+    - "f:you're the one not home to\r"
+    - "f:take care of them\r"
+    - "m:I'm ALWAYS home to take care of them\r"
+    - "m:I ask you for one/ day a week\r"
+    - "f:I'm not discussing this now. \r"
+    - "f:I have to focus on the road.\r"
+    - "\r"
+  - sectionName: $
+    sectionLines: []

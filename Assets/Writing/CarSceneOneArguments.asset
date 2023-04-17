@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105e448996c697343b51ea3ed91413ff, type: 3}
+  m_Name: CarSceneOneArguments
+  m_EditorClassIdentifier: 
+  textFileOrigin: {fileID: 4900000, guid: 33eb61035e7ee3d4aa13cfe7551371a6, type: 3}
+  sections:
+  - sectionName: $diner
+    sectionLines:
+    - "m:Theres a diner up ahead, lets pull in and get something to eat\r"
+    - "f: . . . alright\r"
+    - '!startdiner'

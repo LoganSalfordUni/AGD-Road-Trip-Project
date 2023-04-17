@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DialogueSystem
 {
@@ -23,7 +24,7 @@ namespace DialogueSystem
             commandLine = commandLine.ToLower().Trim();
             //Debug.Log(commandLine);
 
-            string[] lineParts = commandLine.Split('.');
+            string[] lineParts = commandLine.Split('/');
             for (int i = 0; i < lineParts.Length; i++)
                 lineParts[i] = lineParts[i].Trim();
 
@@ -31,14 +32,33 @@ namespace DialogueSystem
                 nextStoryBeat();
             if (lineParts[0] == "gotoauto" || lineParts[0] == "autogoto")
                 GoToSectionAutomatic(lineParts[1]);
-            if (lineParts[0] == "gotomanual" || lineParts[0] == "manualgoto")
+            if (lineParts[0] == "goto" || lineParts[0] == "gotomanual" || lineParts[0] == "manualgoto")
                 GoToSectionManual(lineParts[1]);
 
             if (lineParts[0] == "nextbathroomevent")
                 BathroomEvent();
 
+            if (lineParts[0] == "addprogress")
+                AddProgress(lineParts[1]);
+
+            if (lineParts[0] == "startcarone")
+                StartCarOne();
+            if (lineParts[0] == "startdiner")
+                StartDiner();
+            if (lineParts[0] == "startcartwo")
+                StartCarTwo();
+
+            if (lineParts[0] == "playradioone")
+                PlaySound(0);
+
+            if (lineParts[0] == "vanish")
+                Vanish();
         }
 
+        void AddProgress(string progressMarker)
+        {
+            LineReader.instance.ProgressMarkers.Add(progressMarker);
+        }
 
         void nextStoryBeat()
         {
@@ -66,6 +86,39 @@ namespace DialogueSystem
         void BathroomEvent()
         {
             BathroomDirector.instance.NextEvent();
+        }
+
+        void StartCarOne()
+        {
+            SceneManager.LoadScene("CarOne");
+        }
+
+        void StartDiner()
+        {
+            Debug.Log("starting the diner scene");
+            SceneManager.LoadScene("MontyHallDiner");  
+        }
+
+        void StartCarTwo()
+        {
+            SceneManager.LoadScene("CarTwo");
+        }
+
+        void Ending()
+        {
+            SceneManager.LoadScene("Ending");
+        }
+
+        
+        void PlaySound(int soundNumber) 
+        { 
+
+        }
+
+        [SerializeField, Tooltip("If you use the command !vanish in this scene, this is the game object that'll disappear")] GameObject disappearGameObject;
+        void Vanish()
+        {
+            disappearGameObject.SetActive(false);
         }
     }
 }

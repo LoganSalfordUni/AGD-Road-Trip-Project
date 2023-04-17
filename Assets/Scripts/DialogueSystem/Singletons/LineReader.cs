@@ -18,6 +18,7 @@ namespace DialogueSystem
         private void Start()
         {
             _progressMarkers = new HashSet<string>();
+            MainJumpToSection("start");
 
             /*if (TESTLoadTextFileOnPlay)
                 currentArgumentFile.LoadTextFile();

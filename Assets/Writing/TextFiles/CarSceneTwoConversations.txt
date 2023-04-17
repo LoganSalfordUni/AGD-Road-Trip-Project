@@ -1,0 +1,45 @@
+$start
+!goto/memory
+
+$memory
+Tell me about your favourite memory
+?memoryluck:I met my wife at an orchestra/dinosaur:memoryluck:I won the dinosaur lottery one time and spent all the money on palm leaves/venus:memoryluck:Thes festivals on Venus, each year we would set the sky alight to bring us good fortune
+
+$memoryluck
+Do you believe in luck?
+?luckyes:Yes
+
+$luckyes
+In what capacity? like, its just something we can observe after the facts. or that luck is something immaterial that we're born with
+?luckYes2:We're born with a certain amount of luck/luckNo:Just something to observe
+
+$luckyes2
+Do you think your born with much luck? and how much do you have left to spend? I guess theres no way to measure your luck
+that makes this conversation kind of pointless
+?favememory:What about your favourite memory?/worstmemory:What is your worst memory
+
+$luckno
+I think I disagree. I want to believe that something controls our fate. I dont like the idea that its all random
+Lets just talk about something else
+?favememory:What about your favourite memory?/worstmemory:What is your worst memory?
+
+$favememory
+oh. the memory that stands out to me was when I was younger, and I was on holiday with my mum
+We where late for this... pottery class. We stopped and asked one of the locals for the route. 
+and she told us about this shortcut we could take. It sent us through this tiny graveyard.
+There was a lot of bluebells and the grass was overgrown. I stopped to look at the graves.
+All of the graves were unmarked. Everyone buried there didn't have an identity. 
+No one could identify their bodies when they died
+It was peaceful and sad, but it felt like a healthy sadness maybe.
+
+
+$worstmemory
+I'm not sure. Its hard to remember anything I'd call a least favourite memory
+I hate all my bad memories the more recently they happened. so I feel like my answer will be bias
+Like right now, this car journey is my worst memory. 
+I feel like something awful and terrible is bound to happen
+But in five years I probably wont remember this at all
+
+
+
+$faveword

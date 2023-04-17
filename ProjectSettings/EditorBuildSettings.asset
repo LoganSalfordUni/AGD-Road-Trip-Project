@@ -6,7 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MontyHallBathroom.unity
+    path: Assets/Scenes/FinalBuild/Opening.unity
+    guid: 7caae79f688a69541a815698de30d067
+  - enabled: 1
+    path: Assets/Scenes/FinalBuild/CarOne.unity
+    guid: 4b38d994fa3f2494e90a1ed1c1de65d5
+  - enabled: 1
+    path: Assets/Scenes/FinalBuild/CarTwo.unity
+    guid: b412e42717d87f844b168eb884e8fb2c
+  - enabled: 1
+    path: Assets/Scenes/FinalBuild/MontyHallDiner.unity
+    guid: 6153f112fc1c9da4ba61258ec3aae21b
+  - enabled: 1
+    path: Assets/Scenes/FinalBuild/MontyHallBathroom.unity
     guid: d7326c0624cefa2459d1e67d61e764cb
+  - enabled: 1
+    path: Assets/Scenes/FinalBuild/Ending.unity
+    guid: 312e83edc0b2d41438a06162fb8bc260
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 5fe80fac7444a1142bb67505037ee28e, type: 2}

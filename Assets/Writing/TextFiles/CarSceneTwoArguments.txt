@@ -1,0 +1,45 @@
+$diet
+m:By the way, you need to do more
+m:than serve pieces of bread
+m:with cheese on them for tea
+m:when I'm not home
+f:Its just one day a week, they'll live
+m:Its not just sandwiches though, you
+m:always let them eat and drink the 
+m:most sugary foods and I always have to
+m:be the bad one
+f:The government exaggerates how bad sugar is.
+f:I dont worry about it, and I'm healthy
+m:Why is it so hard for you to
+m:take care of our child?
+f:You're complaining at me, when
+f:you're the one not home to
+f:take care of them
+m:I'm ALWAYS home to take care of them
+m:I ask you for one/ day a week
+f:I'm not discussing this now. 
+f:I have to focus on the road.
+
+$finalargument
+f:Your mother called the house earlier by the way
+m:Why didn't you pass me the phone
+f:You were asleep as always 
+m:Well what was she calling for?
+f:She wouldn't say 
+m:Don't take that done with me
+f:What tone
+m:You know exactly what tone I'm talking about 
+f:I have no BLAH idea what BLAH
+m:BLAH BLAH BLAH BLAH 
+f:BLA-
+m:BLAH BLAH BLAH BLAH BLAH
+m:BLAH | BLAH BLAH BLAH BLAH
+f: BLAH BLAH BLAH BLAH
+/add car door opening + unclicking seatbelt noises here
+m:I WILL LEAVE THIS CAR RIGHT NOW
+f:don't joke around, you'd kill yourself
+m:DO I LOOK LIKE IM JOKING
+f:You're gonna get us in an accident, shut the door
+/the mother disappears 			
+!vanish
+/the game ends after like 11 or so seconds

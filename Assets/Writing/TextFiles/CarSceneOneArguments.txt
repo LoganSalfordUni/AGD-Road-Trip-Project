@@ -1,0 +1,4 @@
+$diner
+m:Theres a diner up ahead, lets pull in and get something to eat
+f: . . . alright
+!startdiner
