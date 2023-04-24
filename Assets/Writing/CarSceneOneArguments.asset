@@ -18,4 +18,22 @@ MonoBehaviour:
     sectionLines:
     - "m:Theres a diner up ahead, lets pull in and get something to eat\r"
     - "f: . . . alright\r"
-    - '!startdiner'
+    - "!startdiner\r"
+    - "\r"
+  - sectionName: $one
+    sectionLines:
+    - "m:Put the radio on\r"
+    - "f:I dont feel like listening to music\r"
+    - "m:Why not?\r"
+    - "f:I just don't\r"
+    - "m:Why cant you just tell me\r"
+    - "f:...\r"
+    - "m:...\r"
+    - "\r"
+  - sectionName: $two
+    sectionLines:
+    - "f:I spy with my little eye, something | beginning with S\r"
+    - "m:I'm not in the mood for games\r"
+    - "f:Alright\r"
+    - "\r"
+    - 

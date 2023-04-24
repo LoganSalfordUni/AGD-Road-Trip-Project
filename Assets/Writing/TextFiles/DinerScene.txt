@@ -1,0 +1,21 @@
+$start
+!autogoto/looping
+
+$looping
+f:That’s great. Im hearing. You promoted?
+m:No. Probing Department. My Son is still eating vegetables
+f:Well we’ve been well haven't we
+f:...
+m:We went on vacation to the Bermuda triangle last weekend.
+m:They grow up so fast. My son is 14 now
+f:Too fast
+m:I can slow it down if you want.
+f:I want to golf
+m:I want to golf too. 9pm Sunday?
+f:9pm
+m:It's a deal
+f:We could send the kids to a dog park. This one loves big dogs
+m:Or a circus my son loves the hall of mirrors
+f:I bought new golfing socks
+m:I like golf
+!autogoto/looping

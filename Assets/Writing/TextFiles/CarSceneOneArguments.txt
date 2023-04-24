@@ -2,3 +2,18 @@ $diner
 m:Theres a diner up ahead, lets pull in and get something to eat
 f: . . . alright
 !startdiner
+
+$one
+m:Put the radio on
+f:I dont feel like listening to music
+m:Why not?
+f:I just don't
+m:Why cant you just tell me
+f:...
+m:...
+
+$two
+f:I spy with my little eye, something | beginning with S
+m:I'm not in the mood for games
+f:Alright
+

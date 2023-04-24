@@ -57,7 +57,8 @@ namespace DialogueSystem
 
         void AddProgress(string progressMarker)
         {
-            LineReader.instance.ProgressMarkers.Add(progressMarker);
+            ProgressTracker.instance.AddProgressMarker(progressMarker);
+            LineReader.instance.MainHandleNextLine();
         }
 
         void nextStoryBeat()

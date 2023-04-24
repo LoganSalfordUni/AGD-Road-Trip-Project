@@ -1,5 +1,9 @@
 /Conversation 1 - opening
 $start
+Its so late, I can't remember the last time I was awake this late
+Everything feels different in the night, like the laws or reality arn't being governed as tightly
+!gotoauto/one
+and the air smells really nice. Its peaceful. I like it 
 !goto/suffering
 
 
@@ -13,30 +17,31 @@ Sometimes I just feel angry at everyone
 ?suffering3: You need help
 
 $suffering3
-Lets just talk about something else 
+Lets just talk about something else...
 !goto/romantic
 
 
 /Conversation 3 - Romantics 
 $romantic
 Do you consider yourself to be a romantic? 
-?romanticDinosaur: I was banished from my triceratops tribe for being in love with a teradactyl /romanticVenus: I’m from the planet Venus. I travelled to earth to re-unite with an earthling astronaut I met 90 million years ago
+?romanticDinosaur: I was banished from my triceratops tribe for being in love with a pterodactyl /romanticVenus: I’m from the planet Venus. I travelled to earth to re-unite with an earthling astronaut I met 90 million years ago
 
 $romanticDinosaur
-//oaef. btw i need to change the command manager split from "." to "/" also goto without anything extra on it should mean manual
+!addprogress/dinosaur
 !goto/romantic2
 
 $romanticVenus
-//oaef
+!addprogress/venus
 !goto/romantic2
 
 $romantic2
 I did mean romantic in the sense of seeing beauty in everything, but that’s cool too.  I don’t think I’d ever fall in love with anyone personally. 
 //oaef need a command to play music 
 I think the world is quite beautiful though. So in one sense I'm a romantic, and in the other I'm not.
-When I'm older, I wanna live in the woods and make movies with no characters in them
+When I'm older, I wanna live in the woods and make films about nature
 Sometimes I wonder if most people, or even everyone, is a romantic. How can you not appreciate the beauty of the world?
-Maybe to be a romantic its about what you prioritise. 
+Maybe to be a romantic its about what you prioritise.
+!gotoauto/two
 ...Instead of the beauty of the world, what things freak you out? What are you scared of? Ill start
 Eyes, any animal bigger than a cat, noises birds make
 ?romantic3:Loud noises, abandoned spaces, mirrors
@@ -51,8 +56,16 @@ Going to the dentist, being alone, not knowing if people want to hurt you
 
 $romantichurt
 Sometimes, I guess it depends. Everyone could hurt me so I think its safer to assume the worst. Even the people who don't want to hurt you might do on accident. 
-!gotoauto/diner
+!goto/maybe
 
 $romanticcontinue
 Mirrors, my fingernails growing too long, fire
+!goto/maybe
+
+
+$maybe
+What's your favourite instrument? Mine is the harp. I love the sound it makes, and they look so cool
 !gotoauto/diner
+You dont get to hear the harp much though, I can't think of any songs with one in. I wonder why
+Maybe they dont get along well with other instruments. 
+Maybe its because they're hard to get around. Theyre big and have an awkward shape

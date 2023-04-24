@@ -17,7 +17,7 @@ namespace DialogueSystem
 
         private void Start()
         {
-            _progressMarkers = new HashSet<string>();
+            //_progressMarkers = new HashSet<string>();
             MainJumpToSection("start");
 
             /*if (TESTLoadTextFileOnPlay)
@@ -53,7 +53,9 @@ namespace DialogueSystem
 
         //Questions. (When you answer certain questions or perform certain actions. you may gain a progress marker.)
         [SerializeField] QuestionHandler questionHandler;
-        private HashSet<string> _progressMarkers;
+        
+        //moving the progress markers to their own script where they can stay between scenes. Check ProgressTrackers
+        /*private HashSet<string> _progressMarkers;
         [HideInInspector] public HashSet<string> ProgressMarkers
         {
             get
@@ -64,7 +66,7 @@ namespace DialogueSystem
         public void AddProgressMarker(string add)//use this if you want to remember decisions the player has made 
         {
             _progressMarkers.Add(add.ToLower());
-        }
+        }*/
 
 
         //im splitting the dialogue in two. One, the argument part. is for your parents conversation. it happens in their own time. its upto you if you pay attention or not
@@ -139,7 +141,7 @@ namespace DialogueSystem
                     if (choiceParts.Length == 3)
                     {
                         //if there are 3 strings. The first should be the requirement for having this choice. then the second and third are as normal (section name, text description)
-                        if (ProgressMarkers.Contains(choiceParts[0].Trim().ToLower()))
+                        if (ProgressTracker.instance.ProgressMarkers.Contains(choiceParts[0].Trim().ToLower()))
                         {
                             availibleChoices.Add(new Choice(choiceParts[1].Trim(), choiceParts[2].Trim()));
                         }

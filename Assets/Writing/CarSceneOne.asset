@@ -16,6 +16,11 @@ MonoBehaviour:
   sections:
   - sectionName: $start
     sectionLines:
+    - "Its so late, I can't remember the last time I was awake this late\r"
+    - "Everything feels different in the night, like the laws or reality arn't being
+      governed as tightly\r"
+    - "!gotoauto/one\r"
+    - "and the air smells really nice. Its peaceful. I like it \r"
     - "!goto/suffering\r"
     - "\r"
     - "\r"
@@ -32,7 +37,7 @@ MonoBehaviour:
     - "\r"
   - sectionName: $suffering3
     sectionLines:
-    - "Lets just talk about something else \r"
+    - "Lets just talk about something else...\r"
     - "!goto/romantic\r"
     - "\r"
     - "\r"
@@ -40,15 +45,17 @@ MonoBehaviour:
     sectionLines:
     - "Do you consider yourself to be a romantic? \r"
     - "?romanticDinosaur: I was banished from my triceratops tribe for being in love
-      with a teradactyl /romanticVenus: I\u2019m from the planet Venus. I travelled
+      with a pterodactyl /romanticVenus: I\u2019m from the planet Venus. I travelled
       to earth to re-unite with an earthling astronaut I met 90 million years ago\r"
     - "\r"
   - sectionName: $romanticdinosaur
     sectionLines:
+    - "!addprogress/dinosaur\r"
     - "!goto/romantic2\r"
     - "\r"
   - sectionName: $romanticvenus
     sectionLines:
+    - "!addprogress/venus\r"
     - "!goto/romantic2\r"
     - "\r"
   - sectionName: $romantic2
@@ -57,11 +64,12 @@ MonoBehaviour:
       cool too.  I don\u2019t think I\u2019d ever fall in love with anyone personally.
       \r"
     - "I think the world is quite beautiful though. So in one sense I'm a romantic,
-      and in the other I'm not. When I'm older, I wanna live in the woods and make
-      movies with no characters in them\r"
+      and in the other I'm not.\r"
+    - "When I'm older, I wanna live in the woods and make films about nature\r"
     - "Sometimes I wonder if most people, or even everyone, is a romantic. How can
-      you not appreciate the beauty of the world? Maybe to be a romantic its about
-      what you prioritise. \r"
+      you not appreciate the beauty of the world?\r"
+    - "Maybe to be a romantic its about what you prioritise.\r"
+    - "!gotoauto/two\r"
     - "...Instead of the beauty of the world, what things freak you out? What are
       you scared of? Ill start\r"
     - "Eyes, any animal bigger than a cat, noises birds make\r"
@@ -83,9 +91,21 @@ MonoBehaviour:
     - "Sometimes, I guess it depends. Everyone could hurt me so I think its safer
       to assume the worst. Even the people who don't want to hurt you might do on
       accident. \r"
-    - "!gotoauto/diner\r"
+    - "!goto/maybe\r"
     - "\r"
   - sectionName: $romanticcontinue
     sectionLines:
     - "Mirrors, my fingernails growing too long, fire\r"
-    - '!gotoauto/diner'
+    - "!goto/maybe\r"
+    - "\r"
+    - "\r"
+  - sectionName: $maybe
+    sectionLines:
+    - "What's your favourite instrument? Mine is the harp. I love the sound it makes,
+      and they look so cool\r"
+    - "!gotoauto/diner\r"
+    - "You dont get to hear the harp much though, I can't think of any songs with
+      one in. I wonder why\r"
+    - "Maybe they dont get along well with other instruments. \r"
+    - Maybe its because they're hard to get around. Theyre big and have an awkward
+      shape

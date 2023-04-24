@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DialogueSystem;
+using UnityEngine.SceneManagement;
 
 public class BathroomDirector : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class BathroomDirector : MonoBehaviour
         instance = this;
     }
             
-
+    //as a note. the doors in the array, are listed 0-2. The doors as far as the variables below are concerned are 1-3. just keep that in mind
     int selectedDoor;
     int revealedDoor;
     int goalDoor;//the door that you want to choose
@@ -29,6 +30,8 @@ public class BathroomDirector : MonoBehaviour
     [SerializeField]
     GameObject[] doors;//for now im just deleting these doors. mby animate them later but theres no point in doing so whilst i dont have the art assets
 
+    [SerializeField, Tooltip ("What spawns behind the doors")]
+    GameObject Skeleton;
     enum CurrentStoryState
     {
         startingDialogue,//happens at the start of the scene
@@ -45,40 +48,66 @@ public class BathroomDirector : MonoBehaviour
     {
         currentStory = CurrentStoryState.startingDialogue;
         LineReader.instance.MainJumpToSection("bathroomstart");
+
+        goalDoor = Random.Range(1, 4);
+        Vector3 spawnLocation = new Vector3(doors[goalDoor-1].transform.position.x, 1f, 0.7f);
+        Instantiate(Skeleton, spawnLocation, Quaternion.identity);
+        canClickDoor = true;
     }
 
+    bool canClickDoor;
     public void ClickDoor(int doorNumber)
     {
+        if (!canClickDoor)
+            return;
+
         if (currentStory == CurrentStoryState.pickFirstDoor)
         {
             selectedDoor = doorNumber;
             currentStory = CurrentStoryState.chosenFirstDoor;
+            
             ChosenDoor();
         }
         else if (currentStory == CurrentStoryState.waitingForSwap)
         {
             selectedDoor = doorNumber;
             currentStory = CurrentStoryState.finalReveal;
+            
             FinalReveal();
         }
+
+
+        
+    }
+    
+    IEnumerator WaitForClick()
+    {
+        canClickDoor = false;
+        yield return new WaitForEndOfFrame();
+        //yield return new WaitForSeconds(0.5f);
+        canClickDoor = true;
     }
 
     public void NextEvent()
     {
+        StartCoroutine(WaitForClick());//make sure the player doesnt click a door this frame 
         if (currentStory == CurrentStoryState.startingDialogue)
         {
             currentStory = CurrentStoryState.pickFirstDoor;//this allows the player to click the door
         }
-
-        if (currentStory == CurrentStoryState.chosenFirstDoor)
+        else if (currentStory == CurrentStoryState.chosenFirstDoor)
         {
             currentStory = CurrentStoryState.revealSecondDoor;
             RevealSecondDoor();
         }
-
-        if (currentStory == CurrentStoryState.revealSecondDoor)
+        else if (currentStory == CurrentStoryState.revealSecondDoor)
         {
             currentStory = CurrentStoryState.waitingForSwap;
+        }
+        else if (currentStory == CurrentStoryState.finalReveal)
+        {
+            //next scene
+            SceneManager.LoadScene("MontyHallDinerTwo");
         }
     }
 
@@ -99,9 +128,8 @@ public class BathroomDirector : MonoBehaviour
         possibleDoors.Remove(selectedDoor);
 
         //revealedDoor = possibleDoors[0];//there are either 2 or 1 items left in this list. Either way, grabbing the earliest one is fine. The flaw with this is that, if a player knew it was coded this way, and the player chose door one, and door 3 gets revealed. then they know for certain that door 2 is correct. but that shouldnt really be a concern
-        revealedDoor = Random.Range(0, possibleDoors.Count);
-
-        Destroy(doors[revealedDoor]);
+        revealedDoor = possibleDoors[Random.Range(0, possibleDoors.Count)];
+        Destroy(doors[revealedDoor-1]);
 
         LineReader.instance.MainJumpToSection("revealedsecond");
 
@@ -110,6 +138,8 @@ public class BathroomDirector : MonoBehaviour
     void FinalReveal()
     {
         //reveal selected door. Play dialogue
+
+        Destroy(doors[selectedDoor - 1]);
 
         if (selectedDoor == goalDoor)
         {
