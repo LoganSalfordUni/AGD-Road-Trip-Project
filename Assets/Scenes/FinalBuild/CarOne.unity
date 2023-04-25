@@ -150,6 +150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetLamp (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3341071624200983061, guid: 0a19eb16cc7147241aebbc2788d19de1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5819099254684700073, guid: 0a19eb16cc7147241aebbc2788d19de1, type: 3}
       propertyPath: m_RootOrder
       value: 8

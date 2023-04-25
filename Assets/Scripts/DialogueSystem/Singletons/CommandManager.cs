@@ -53,6 +53,8 @@ namespace DialogueSystem
 
             if (lineParts[0] == "vanish")
                 Vanish();
+            if (lineParts[0] == "ending")
+                StartCoroutine(Ending());
         }
 
         void AddProgress(string progressMarker)
@@ -76,6 +78,7 @@ namespace DialogueSystem
             //gets the automatic dialogue system (used for the arguments) to skip to a specific place
             Debug.Log("sending the automatic dialogue system to: " + sectionName);
             LineReader.instance.ArgumentJumpToSection(sectionName);
+            LineReader.instance.MainHandleNextLine();
         }
 
         void GoToSectionManual(string sectionName)
@@ -105,11 +108,11 @@ namespace DialogueSystem
             SceneManager.LoadScene("CarTwo");
         }
 
-        void Ending()
+        IEnumerator Ending()
         {
+            yield return new WaitForSeconds(7f);
             SceneManager.LoadScene("Ending");
         }
-
         
         void PlaySound(int soundNumber) 
         { 

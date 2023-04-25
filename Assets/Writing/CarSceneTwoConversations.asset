@@ -13,4 +13,87 @@ MonoBehaviour:
   m_Name: CarSceneTwoConversations
   m_EditorClassIdentifier: 
   textFileOrigin: {fileID: 4900000, guid: feb77c5e3588b2141b14162bff6f5b58, type: 3}
-  sections: []
+  sections:
+  - sectionName: $start
+    sectionLines:
+    - "!goto/memory\r"
+    - "\r"
+  - sectionName: $memory
+    sectionLines:
+    - "Tell me about your favourite memory\r"
+    - "?memoryluck:I met my wife at an orchestra/dinosaur:memoryluck:I won the dinosaur
+      lottery one time and spent all the money on palm leaves/venus:memoryluck:The
+      festivals on Venus, each year we would set the sky alight to bring us good
+      fortune\r"
+    - "\r"
+  - sectionName: $memoryluck
+    sectionLines:
+    - "!gotoauto/diet\r"
+    - "Do you believe in luck?\r"
+    - "?luckyes:Yes\r"
+    - "\r"
+  - sectionName: $luckyes
+    sectionLines:
+    - "In what capacity? like, its just something we can observe after the facts.
+      or that luck is something immaterial that we're born with\r"
+    - "?luckYes2:We're born with a certain amount of luck/luckNo:Just something to
+      observe\r"
+    - "\r"
+  - sectionName: $luckyes2
+    sectionLines:
+    - "Do you think your born with much luck? and how much do you have left to spend?
+      I guess theres no way to measure your luck\r"
+    - "that makes this conversation kind of pointless\r"
+    - "?favememory:What about your favourite memory?/worstmemory:What is your worst
+      memory\r"
+    - "\r"
+  - sectionName: $luckno
+    sectionLines:
+    - "I think I disagree. I want to believe that something controls our fate. I
+      dont like the idea that its all random\r"
+    - "Lets just talk about something else\r"
+    - "?favememory:What about your favourite memory?/worstmemory:What is your worst
+      memory?\r"
+    - "\r"
+  - sectionName: $favememory
+    sectionLines:
+    - "oh. the memory that stands out to me was when I was younger, and I was on
+      holiday with my mum\r"
+    - "We where late for this... pottery class. We stopped and asked one of the locals
+      for the route. \r"
+    - "and she told us about this shortcut we could take. It sent us through this
+      tiny graveyard.\r"
+    - "There was a lot of bluebells and the grass was overgrown. I stopped to look
+      at the graves.\r"
+    - "All of the graves were unmarked. Everyone buried there didn't have an identity.
+      \r"
+    - "No one could identify their bodies when they died\r"
+    - "It was peaceful and sad, but it felt like a healthy sadness maybe.\r"
+    - "!goto/faveword\r"
+    - "\r"
+    - "\r"
+  - sectionName: $worstmemory
+    sectionLines:
+    - "I'm not sure. Its hard to remember anything I'd call a least favourite memory\r"
+    - "I hate all my bad memories the more recently they happened. so I feel like
+      my answer will be bias\r"
+    - "Like right now, this car journey is my worst memory. \r"
+    - "I feel like something awful and terrible is bound to happen\r"
+    - "But in five years I probably wont remember this at all\r"
+    - "!goto/faveword\r"
+    - "\r"
+    - "\r"
+    - "\r"
+  - sectionName: $faveword
+    sectionLines:
+    - "!gotoauto/finalargument\r"
+    - "Whats your favourite word? Mine is Sojourn, I read it in a book. It means
+      temporary home.\r"
+    - "?word2:Serene/word2:Celestial/word2:Crestfallen\r"
+    - "\r"
+  - sectionName: $word2
+    sectionLines:
+    - "That\uFFFDs a good choice. Sometimes I get sad when I think about my favourite
+      word, because I don\uFFFDt get to use it as often as I\uFFFDd like\r"
+    - 'You can fill your life with your favourite colour, and if its small enough,
+      also your favourite number. But its hard to include Sojourn in day to day life '

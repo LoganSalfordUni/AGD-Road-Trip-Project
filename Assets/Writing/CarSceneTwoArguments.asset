@@ -37,5 +37,26 @@ MonoBehaviour:
     - "f:I'm not discussing this now. \r"
     - "f:I have to focus on the road.\r"
     - "\r"
-  - sectionName: $
-    sectionLines: []
+  - sectionName: $finalargument
+    sectionLines:
+    - "f:Your mother called the house earlier by the way\r"
+    - "m:Why didn't you pass me the phone\r"
+    - "f:You were asleep as always \r"
+    - "m:Well what was she calling for?\r"
+    - "f:She wouldn't say \r"
+    - "m:Don't take that done with me\r"
+    - "f:What tone\r"
+    - "m:You know exactly what tone I'm talking about \r"
+    - "f:I have no BLAH idea what BLAH\r"
+    - "m:BLAH BLAH BLAH BLAH \r"
+    - "f:BLA-\r"
+    - "m:BLAH BLAH BLAH BLAH BLAH\r"
+    - "m:BLAH | BLAH BLAH BLAH BLAH\r"
+    - "f: BLAH BLAH BLAH BLAH\r"
+    - "m:I WILL LEAVE THIS CAR RIGHT NOW\r"
+    - "f:don't joke around, you'd kill yourself\r"
+    - "m:DO I LOOK LIKE IM JOKING\r"
+    - "f:You're gonna get us in an accident, shut the door\r"
+    - "!vanish\r"
+    - "!ending\r"
+    - 

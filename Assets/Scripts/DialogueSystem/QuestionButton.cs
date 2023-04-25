@@ -15,6 +15,7 @@ public class QuestionButton : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        Debug.Log("click");
         questionHandler.MakeChoice(mySectionName);
     }
 }

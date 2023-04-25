@@ -42,4 +42,5 @@ m:DO I LOOK LIKE IM JOKING
 f:You're gonna get us in an accident, shut the door
 /the mother disappears 			
 !vanish
+!ending
 /the game ends after like 11 or so seconds

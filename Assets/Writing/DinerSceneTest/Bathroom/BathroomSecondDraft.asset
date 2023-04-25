@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105e448996c697343b51ea3ed91413ff, type: 3}
+  m_Name: BathroomSecondDraft
+  m_EditorClassIdentifier: 
+  textFileOrigin: {fileID: 4900000, guid: ce8be3ef9164fe94fbbf2b148ff7b7ee, type: 3}
+  sections:
+  - sectionName: $bathroomstart
+    sectionLines:
+    - "Who are you. This bathroom is for men or women. Your not allowed here.\r"
+    - "hehehe\r"
+    - "trespassers have to play my game. I've stolen your skeleton, and if you want
+      it back you'll have to play\r"
+    - "Behind one of these three cubicles is your silly human bones. \r"
+    - "You have to guess one of the doors, and then I'll show you a door that DOESNT
+      have your skeleton behind it.\r"
+    - "After that, you get to choose to stick with your first choice like a coward,
+      or put on a brave face and change\r"
+    - "Hurry up and choose a door. hehehe\r"
+    - "!nextbathroomevent \r"
+    - "\r"
+  - sectionName: $chosenfirstdoor
+    sectionLines:
+    - "hehehe. Interesting choice.\r"
+    - "Now I'll show you a door without your skeleton behind it...\r"
+    - "!nextbathroomevent \r"
+    - "\r"
+  - sectionName: $revealedsecond
+    sectionLines:
+    - "hehehe. Are u going to switch, or are you gonna stay???\r"
+    - "!nextbathroomevent\r"
+    - "\r"
+  - sectionName: $finalrevealwin
+    sectionLines:
+    - "Ohohohoh. You chose the right door! Well done human. You can have your skeleton
+      back\r"
+    - "!nextbathroomevent\r"
+    - "\r"
+  - sectionName: $finalreveallose
+    sectionLines:
+    - "Bwahahah. Idiot. That\u2019s the wrong door. You look so pitiful, I\u2019ll
+      give you the skeleton of the last one who came in here. Its chewed up a bit\r"
+    - '!nextbathroomevent'

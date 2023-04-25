@@ -3,9 +3,10 @@ $start
 
 $memory
 Tell me about your favourite memory
-?memoryluck:I met my wife at an orchestra/dinosaur:memoryluck:I won the dinosaur lottery one time and spent all the money on palm leaves/venus:memoryluck:Thes festivals on Venus, each year we would set the sky alight to bring us good fortune
+?memoryluck:I met my wife at an orchestra/dinosaur:memoryluck:I won the dinosaur lottery one time and spent all the money on palm leaves/venus:memoryluck:The festivals on Venus, each year we would set the sky alight to bring us good fortune
 
 $memoryluck
+!gotoauto/diet
 Do you believe in luck?
 ?luckyes:Yes
 
@@ -31,6 +32,7 @@ There was a lot of bluebells and the grass was overgrown. I stopped to look at t
 All of the graves were unmarked. Everyone buried there didn't have an identity. 
 No one could identify their bodies when they died
 It was peaceful and sad, but it felt like a healthy sadness maybe.
+!goto/faveword
 
 
 $worstmemory
@@ -39,7 +41,15 @@ I hate all my bad memories the more recently they happened. so I feel like my an
 Like right now, this car journey is my worst memory. 
 I feel like something awful and terrible is bound to happen
 But in five years I probably wont remember this at all
+!goto/faveword
 
 
 
 $faveword
+!gotoauto/finalargument
+Whats your favourite word? Mine is Sojourn, I read it in a book. It means temporary home.
+?word2:Serene/word2:Celestial/word2:Crestfallen
+
+$word2
+That's a good choice. Sometimes I get sad when I think about my favourite word, because I don't get to use it as often as I'd like
+You can fill your life with your favourite colour, and if its small enough, also your favourite number. But its hard to include Sojourn in day to day life 

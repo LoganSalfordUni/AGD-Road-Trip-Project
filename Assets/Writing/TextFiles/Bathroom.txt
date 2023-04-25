@@ -1,0 +1,26 @@
+$bathroomstart
+Who are you. This bathroom is for men or women. Your not allowed here.
+hehehe
+trespassers have to play my game. I've stolen your skeleton, and if you want it back you'll have to play
+Behind one of these three cubicles is your silly human bones. 
+You have to guess one of the doors, and then I'll show you a door that DOESNT have your skeleton behind it.
+After that, you get to choose to stick with your first choice like a coward, or put on a brave face and change
+Hurry up and choose a door. hehehe
+!nextbathroomevent 
+
+$chosenfirstdoor
+hehehe. Interesting choice.
+Now I'll show you a door without your skeleton behind it...
+!nextbathroomevent 
+
+$revealedsecond
+hehehe. Are u going to switch, or are you gonna stay???
+!nextbathroomevent
+
+$finalrevealwin
+Ohohohoh. You chose the right door! Well done human. You can have your skeleton back
+!nextbathroomevent
+
+$finalreveallose
+Bwahahah. Idiot. That’s the wrong door. You look so pitiful, I’ll give you the skeleton of the last one who came in here. Its chewed up a bit
+!nextbathroomevent
