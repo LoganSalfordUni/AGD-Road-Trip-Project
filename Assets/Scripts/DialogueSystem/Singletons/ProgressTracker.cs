@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ProgressTracker : MonoBehaviour
 {
     //make sure this is attatched to a game object w/ no other components
@@ -35,11 +36,5 @@ public class ProgressTracker : MonoBehaviour
         _progressMarkers.Add(add.ToLower());
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();//might as well put the quit button in this script considering its in every scene. 
-        }
-    }
+    
 }

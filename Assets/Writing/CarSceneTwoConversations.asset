@@ -93,7 +93,8 @@ MonoBehaviour:
     - "\r"
   - sectionName: $word2
     sectionLines:
-    - "That\uFFFDs a good choice. Sometimes I get sad when I think about my favourite
-      word, because I don\uFFFDt get to use it as often as I\uFFFDd like\r"
+    - "That's a good choice. Sometimes I get sad when I think about my favourite
+      word, because I don't get to use it as often as I'd like\r"
     - 'You can fill your life with your favourite colour, and if its small enough,
       also your favourite number. But its hard to include Sojourn in day to day life '
+    - ...

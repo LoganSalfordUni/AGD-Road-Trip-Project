@@ -110,7 +110,7 @@ namespace DialogueSystem
 
         IEnumerator Ending()
         {
-            yield return new WaitForSeconds(7f);
+            yield return new WaitForSeconds(3f);
             SceneManager.LoadScene("Ending");
         }
         
@@ -123,6 +123,8 @@ namespace DialogueSystem
         void Vanish()
         {
             disappearGameObject.SetActive(false);
+
+            StartCoroutine(Ending());
         }
     }
 }

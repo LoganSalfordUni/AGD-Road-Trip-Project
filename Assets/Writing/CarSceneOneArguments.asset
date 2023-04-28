@@ -32,7 +32,7 @@ MonoBehaviour:
     - "\r"
   - sectionName: $two
     sectionLines:
-    - "f:I spy with my little eye, something | beginning with S\r"
+    - "f:I spy with my little eye, something beginning with S\r"
     - "m:I'm not in the mood for games\r"
     - "f:Alright\r"
     - "\r"

@@ -17,7 +17,7 @@ MonoBehaviour:
   - sectionName: $start
     sectionLines:
     - "Its so late, I can't remember the last time I was awake this late\r"
-    - "Everything feels different in the night, like the laws or reality arn't being
+    - "Everything feels different in the night, like the laws or reality aren't being
       governed as tightly\r"
     - "!gotoauto/one\r"
     - "and the air smells really nice. Its peaceful. I like it \r"
